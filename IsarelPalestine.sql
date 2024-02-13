@@ -1,6 +1,7 @@
 -- DATA QUALITY CHECK
 SELECT * FROM IsarelPalestine LIMIT 10; 
 
+-- Replacing the null values. 
 SELECT 
     event_id_cnty,
     SUM(CASE WHEN event_date IS NULL THEN 1 ELSE 0 END) AS Missing_Dates,
